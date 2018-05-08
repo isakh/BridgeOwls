@@ -1,4 +1,8 @@
 /build
+local.properties
+gradle.properties
+
+
 
 # android resource files #
 ##########################
