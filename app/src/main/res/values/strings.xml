@@ -1,0 +1,284 @@
+<resources>
+
+    <!-- ============================================================================== -->
+    <!-- ********** PACKAGE TITLE ON DEVICE  ********** -->
+    <!-- ============================================================================== -->
+    <string name="app_name">BRIDGE</string>
+    <string name="database_name">bridge.db</string>
+
+    <!-- =================================================================================== -->
+    <!-- ********** SETUP & SURVEYS ********** -->
+    <!-- =================================================================================== -->
+    <!-- Layout: user_setup_fragment -->
+    <!-- *************************** -->
+    <string name="user_setup_title">Welcome: Please Login or Sign Up</string>
+    <string name="user_setup_login_text">LOGIN BELOW</string>
+    <string name="user_setup_login_hint">Login Name</string>
+    <string name="user_setup_login_button">LOGIN</string>
+    <string name="user_setup_register_text">REGISTER BELOW</string>
+    <string name="user_setup_register_hint">New User Name</string>
+    <string name="user_setup_register_button">REGISTER</string>
+
+    <!-- =============================================================================== -->
+    <!-- Layout: pre_survey_fragment -->
+    <!-- *************************** -->
+    <string name="pre_survey_title">Tell Us About Yourself</string>
+    <!-- [1] What is your age? [NUMBER] -->
+    <string name="pre_survey_age_query_text">Please select your age?</string>
+    <string name="pre_survey_age_default"> --- ??? --- </string>
+    <string name="pre_survey_age_0_10">Under 10 Years Old</string>
+    <string name="pre_survey_age_10_20">Between 10 and 20 Years Old</string>
+    <string name="pre_survey_age_20_30">Between 20 and 30 Years Old</string>
+    <string name="pre_survey_age_30_40">Between 30 and 40 Years Old</string>
+    <string name="pre_survey_age_40_50">Between 40 and 50 Years Old</string>
+    <string name="pre_survey_age_50_60">Between 50 and 60 Years Old</string>
+    <string name="pre_survey_age_60_plus">Over 60 Years Old</string>
+    <!-- [2] How many years have you been a bird watcher? [NUMBER] -->
+    <string name="pre_survey_years_twitching_query_text">How many years have you been a bird watcher?</string>
+    <string name="pre_survey_years_twitching_default"> --- ??? --- </string>
+    <string name="pre_survey_years_twitching_0">I am not a bird watcher</string>
+    <string name="pre_survey_years_twitching_0_3">Under 3 years</string>
+    <string name="pre_survey_years_twitching_3_5">Between 3 and 5 years</string>
+    <string name="pre_survey_years_twitching_5_10">Between 5 and 10 years</string>
+    <string name="pre_survey_years_twitching_10_20">Between 10 and 20 years</string>
+    <string name="pre_survey_years_twitching_20_40">Between 20 and 40</string>
+    <string name="pre_survey_years_twitching_40_plus">More than 40 years </string>
+    <!-- [3] Estimate the number of bird species that you know by sight: [NUMBER] -->
+    <!-- TODO should we just say identify? how to separate visual and audio identification?? -->
+    <string name="pre_survey_species_known_query_text">How many species of bird can you identify?</string>
+    <string name="pre_survey_species_known_default"> --- ??? --- </string>
+    <string name="pre_survey_species_known_0">I cannot identify any</string>
+    <string name="pre_survey_species_known_1_10">Between 1 and 10 species</string>
+    <string name="pre_survey_species_known_10_25">Between 10 and 25 species</string>
+    <string name="pre_survey_species_known_25_50">Between 25 and 50 species</string>
+    <string name="pre_survey_species_known_50_100">Between 50 and 100 species</string>
+    <string name="pre_survey_species_known_100_250">Between 100 and 250 species</string>
+    <string name="pre_survey_species_known_250_plus">More than 250 species</string>
+    <!-- [4] Estimated the number of bird species that you known by their calls/songs: [NUMBER] -->
+    <string name="pre_survey_audible_identification_query_text">How many bird songs can you identify?</string>
+    <string name="pre_survey_audible_identification_default"> --- ??? --- </string>
+    <string name="pre_survey_audible_identification_0">I cannot identify any</string>
+    <string name="pre_survey_audible_identification_1_10">Between 1 and 10</string>
+    <string name="pre_survey_audible_identification_10_20">Between 10 and 20</string>
+    <string name="pre_survey_audible_identification_20_30">Between 20 and 30</string>
+    <string name="pre_survey_audible_identification_30_50">Between 30 and 50</string>
+    <string name="pre_survey_audible_identification_50_100">Between 50 and 100</string>
+    <string name="pre_survey_audible_identification_100_plus">More than 100</string>
+    <!-- [5] Do you consider listening to a bird to be equivalent to seeing it? [BOOLEAN] -->
+    <string name="pre_survey_listening_equivalent_query_text">Is listening equivalent to seeing for identification? </string>
+    <string name="pre_survey_listening_equivalent_button_no">NO</string>
+    <string name="pre_survey_listening_equivalent_button_yes">YES</string>
+    <!-- [6] Do you have experience with touch screen tablets or telephones (Y/N), -->
+    <string name="pre_survey_interface_experience_query_text">Do you have experience with touch screen interfaces (phones / tablets)?</string>
+    <string name="pre_survey_interface_experience_button_no">NO</string>
+    <string name="pre_survey_interface_experience_button_yes">YES</string>
+    <!-- [6a]   if so for how many years: [BOOLEAN & NUMBER] TODO 11+ is upper bound? -->
+    <string name="pre_survey_experience_duration_query_text">How many years have you used a touch screen?</string>
+    <string name="pre_survey_experience_duration_default"> --- ??? --- </string>
+    <string name="pre_survey_experience_duration_0_1">Less than 1 year</string>
+    <string name="pre_survey_experience_duration_1_3">Between 1 and 3 years</string>
+    <string name="pre_survey_experience_duration_3_5">Between 3 and 5 years</string>
+    <string name="pre_survey_experience_duration_5_7">Between 5 and 7 years</string>
+    <string name="pre_survey_experience_duration_7_9">Between 7 and 9 years</string>
+    <string name="pre_survey_experience_duration_9_11">Between 9 and 11 years</string>
+    <string name="pre_survey_experience_duration_11_plus">More than 11 years</string>
+    <!-- Submit Button -->
+    <string name="pre_survey_submit_button">Submit Survey And Continue To Games</string>
+
+    <!-- ======================================================================================-->
+    <!-- Layout: post_survey_fragment -->
+    <!-- **************************** -->
+    <string name="post_survey_title">Thank you for playing, please answer the following questions</string>
+    <!-- [1] Prior to today's exposure were you familiar with spectrograms as used to
+    visually depict sounds?  [BOOLEAN] //TODO should this question be asked in both pre and post?-->
+    <string name="post_survey_prior_spectrogram_familiarity_query_text">Before playing these games were you familiar with spectrograms as used to draw sounds?</string>
+    <string name="post_survey_prior_spectrogram_familiarity_button_no">NO</string>
+    <string name="post_survey_prior_spectrogram_familiarity_button_yes">YES</string>
+    <!-- [2]  Whilst playing the matchGame, could you hear a song by observing its shape? LIKERT] -->
+    <string name="post_survey_hearing_equals_seeing_query_text">Whilst playing the matchGame, did you learn to hear a song by observing its shape?</string>
+    <string name="post_survey_hearing_equals_seeing_button_never">NEVER</string>
+    <string name="post_survey_hearing_equals_seeing_button_rarely">RARELY</string>
+    <string name="post_survey_hearing_equals_seeing_button_sometimes">SOMETIMES</string>
+    <string name="post_survey_hearing_equals_seeing_button_frequently">FREQUENTLY</string>
+    <string name="post_survey_hearing_equals_seeing_button_always">ALWAYS</string>
+    <!-- [3] After playing the matchGame, could you predict the shape of the song when listening to it? [LIKERT/ Boolean?] -->
+    <string name="post_survey_hearing_equals_predicting_query_text">After playing the matchGame, could you predict the shape of the song when listening to it? </string>
+    <string name="post_survey_hearing_equals_predicting_button_never">NEVER</string>
+    <string name="post_survey_hearing_equals_predicting_button_rarely">RARELY</string>
+    <string name="post_survey_hearing_equals_predicting_button_sometimes">SOMETIMES</string>
+    <string name="post_survey_hearing_equals_predicting_button_frequently">FREQUENTLY</string>
+    <string name="post_survey_hearing_equals_predicting_button_always">ALWAYS</string>
+    <!-- Submit Button -->
+    <string name="post_survey_submit_button">Submit</string>
+    <!-- [11] What part of the interface caused you the most confusion? [TEXT] -->
+    <string name="post_survey_cause_of_most_confusion_query_text">TODO</string>
+    <!-- TODO programmatically include the following only if the survey is after playing swap matchGame? -->
+    <!-- [12] How motivated were you to find the visual representation that best fit the song you had initially heard?
+    [LIKERT] unmotivated - gradually lost interest - neutral - interested throughout the process - highly motivated)
+    TODO only applicable to swap matchGame? (phrasing)-->
+    <string name="post_survey_success_motivation_query_text">TODO</string>
+    <!-- [2] How comfortable were you that each subsequent turn in the matchGame was getting
+    closer to the solution? [LIKERT] rarely - sometimes not - half the time - sometimes yes - frequently) -->
+    <string name="post_survey_solution_progress_query_text">TODO</string>
+
+    <!-- ============================================================================== -->
+    <!-- Layout: finished_fragment -->
+    <!-- ************************* -->
+    <string name="finished_fragment_next_player_button_text">Next Player</string>
+    <string name="finished_fragment_close_app_button_text">Exit Game</string>
+
+    <!-- ============================================================================== -->
+    <!-- ********** POPUPS: SETTINGS & WINNING ********** -->
+    <!-- =================================================================================== -->
+    <!-- ============================================================================== -->
+    <!-- Layout: match_popup_settings_view -->
+    <!-- *************************** -->
+    <string name="match_popup_settings_title_text">Settings</string>
+    <string name="match_popup_settings_sound_on_text">Sound ON</string>
+    <string name="match_popup_settings_sound_off_text">Sound OFF</string>
+    <string name="match_popup_settings_mixer_on_text">Mixer ON</string>
+    <string name="match_popup_settings_mixer_off_text">Mixer OFF</string>
+
+    <!-- ============================================================================== -->
+    <!-- Layout: swap_popup_settings_view -->
+    <!-- *************************** -->
+    <string name="swap_popup_settings_title_text">Settings</string>
+    <string name="swap_popup_settings_looper_on_text">Loop ON</string>    <!-- the looper will replay a track until pause/stop is pressed -->
+    <string name="swap_popup_settings_looper_off_text">Loop OFF</string>
+    <string name="swap_popup_settings_mixer_on_text">Mixer ON</string>
+    <string name="swap_popup_settings_mixer_off_text">Mixer OFF</string>
+    <string name="swap_popup_settings_winning_easy_text">Win EASY</string>
+    <string name="swap_popup_settings_winning_hard_text">Win HARD</string>
+
+    <!-- =================================================================================== -->
+    <!-- Layout: popup_won_view -->
+    <!-- ********************** -->
+    <!-- title -->
+    <string name="popup_won_view_title">Level Complete</string>
+    <!-- time information -->
+    <string name="popup_won_time_text">Time</string>
+    <string name="popup_won_game_time_at_start">00:00</string>     <!-- TODO fix this and make dynamic -->
+    <!-- score information -->
+    <string name="popup_won_score_text">Score</string>
+    <string name="popup_won_score_at_start">240</string>           <!-- TODO fix this and make dynamic -->
+    <!-- post survey button -->
+    <string name="popup_won_view_post_survey_button_text">Done Playing?</string>
+
+
+    <!-- =================================================================================== -->
+    <!-- ********** GAME & THEME TITLES ********** -->
+    <!-- =================================================================================== -->
+    <!-- Class: GameSelectFragment -->
+    <!-- ************************* -->
+    <string name="game_select_fragment_title">CHOOSE A GAME</string>
+    <string name="game_match_title_text">GAME 1</string>
+    <string name="game_swap_title_text">GAME 2</string>
+    <string name="game_compose_title_text">GAME 3</string>
+
+    <!-- =================================================================================== -->
+    <!-- Class: MatchThemes -->
+    <!-- ****************** -->
+    <string name="match_theme_select_title">CHOOSE A THEME</string>
+    <string name="match_themes_blank_name">MODE 3</string>
+    <string name="match_themes_birds_name">MODE 1</string>
+    <string name="match_themes_spectrograms_name">MODE 2</string>
+
+    <!-- =================================================================================== -->
+    <!-- Layout: MatchDifficulty -->
+    <!-- ************************* -->
+    <string name="match_difficulty_title">MATCH THE TILES</string>
+    <string name="match_difficulty_level_1">EASY</string>
+    <string name="match_difficulty_level_2">MEDIUM</string>
+    <string name="match_difficulty_level_3">HARD</string>
+
+    <!-- =================================================================================== -->
+    <!-- Layout: SwapDifficulty -->
+    <!-- ************************* -->
+    <string name="swap_difficulty_title">SOLVE THE PUZZLE</string>
+    <string name="swap_difficulty_level_1">EASY</string>
+    <string name="swap_difficulty_level_2">MEDIUM</string>
+    <string name="swap_difficulty_level_3">HARD</string>
+
+    <!-- =================================================================================== -->
+    <!-- Layout: ComposeDifficulty -->
+    <!-- ************************* -->
+    <string name="compose_difficulty_title">BUILD A CHORUS</string>
+    <string name="compose_difficulty_level_1">Loop 8</string>
+    <string name="compose_difficulty_level_2">Loop 16</string>
+    <string name="compose_difficulty_level_3">Loop 24</string>
+
+
+
+    <!-- =================================================================================== -->
+    <!-- ********** BOARD VIEW CONTROLS & TIMERS ********** -->
+    <!-- =================================================================================== -->
+    <!-- =================================================================================== -->
+    <!-- Layout: match_board_fragment -->
+    <!-- **************************** -->
+    <string name="match_game_timebar_text_init">88:88</string>
+
+    <!-- =================================================================================== -->
+    <!-- Layout: swap_game_fragment -->
+    <!-- ************************** -->
+    <string name="swap_game_timebar_text_init">88:88</string>
+
+    <!-- Class: SwapControlsView -->
+    <!-- *********************** -->
+    <string name="swap_controls_button_play">PLAY ROW</string>
+    <string name="swap_controls_button_pause">PAUSE ROW</string>
+
+    <!-- =================================================================================== -->
+    <!-- Layout: compose_game_fragment -->
+    <!-- ***************************** -->
+    <string name="compose_game_done_playing">FINISHED</string>
+
+    <!-- ============================================================================== -->
+    <!-- Layout: finished_compose_fragment -->
+    <!-- ************************* -->
+    <string name="finished_compose_fragment_game_select_button_text">Change Game</string>
+    <string name="finished_compose_fragment_next_player_button_text">Next Player</string>
+    <string name="finished_compose_fragment_close_app_button_text">Exit Games</string>
+
+
+    <!-- =================================================================================== -->
+    <!-- ********** SPECIES LISTS ********** -->
+    <!-- =================================================================================== -->
+    <!-- Class: SpeciesList BGBW -->
+    <!-- *********************** -->
+    <!-- TODO
+    <string name="species_bird_1">House Sparrow	- Passer domesticus</string>
+    <string name="species_bird_2">Blue tit - Cyanistes caeruleus</string>
+    <string name="species_bird_3">Starling - Sturnus vulgaris</string>
+    <string name="species_bird_4">Blackbird - Turdus merula</string>
+    <string name="species_bird_5">Woodpigeon - Columba palumbus</string>
+    <string name="species_bird_6">Chaffinch - Fringilla coelebs</string>
+    <string name="species_bird_7">Goldfinch - Carduelis carduelis</string>
+    <string name="species_bird_8">Great Tit - Parus major</string>
+    <string name="species_bird_9">Collared Dove	- Streptopelia decaocto</string>
+    <string name="species_bird_10">Robin - Erithacus rubecula</string>
+    -->
+
+    <!-- =================================================================================== -->
+    <!-- Class: SpeciesList Nidderdale -->
+    <!-- ***************************** -->
+
+
+    <string name="species_bird_1">Cuckoo - Cuculus canorus</string>
+    <string name="species_bird_2">Skylark -Alauda arvensis</string>
+    <string name="species_bird_3">Song Thrush - Turdus philomelos</string>
+    <string name="species_bird_4">Linnet - Linaria cannabina</string>
+    <string name="species_bird_5">Lesser Redpoll - Acanthis cabaret</string>
+    <string name="species_bird_6">Lapwing - Vanellus vanellus</string>
+    <string name="species_bird_7">Curlew - Numenius arquata</string>
+    <string name="species_bird_8">Kingfisher - Alcedo atthis</string>
+    <string name="species_bird_9">Dipper - Cinclus cinclus</string>
+    <string name="species_bird_10">Grey Wagtail - Motacilla cinerea</string>
+
+    -->
+
+    <!-- =================================================================================== -->
+    <!-- Class: SpeciesList Colorado -->
+    <!-- *************************** -->
+    <!-- TODO -->
+
+</resources>

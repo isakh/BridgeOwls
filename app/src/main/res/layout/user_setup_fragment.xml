@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3e7d8d9"
+    android:orientation="vertical" >
+
+    <!-- TITLE -->
+
+    <TextView
+        android:id="@+id/user_setup_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/user_setup_title"
+        android:textSize="@dimen/user_setup_frag_title_text_size"
+        android:textColor="#0e0e0e"
+        android:layout_marginBottom="@dimen/user_setup_frag_title_margin_bottom"/>
+
+    <!-- LOGIN EXISTING USER -->
+
+    <TextView
+        android:id="@+id/user_setup_login_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/user_setup_login_text"
+        android:textSize="@dimen/user_setup_frag_login_text_size"
+        android:textColor="#0e0e0e"
+        android:layout_marginBottom="@dimen/user_setup_frag_login_text_margin_bottom"/>
+
+    <EditText
+        android:id="@+id/user_setup_login_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/user_setup_login_hint"
+        android:textColor="#0e0e0e"
+        android:inputType="textPersonName"
+        android:textCursorDrawable="@null"
+        android:layout_marginBottom="@dimen/user_setup_frag_login_text_margin_bottom"/>
+
+    <Button
+        android:id="@+id/user_setup_login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/user_setup_login_button"
+        android:textColor="#0e0e0e"
+        android:background="#a9b1ef"
+        android:onClick="loginExistingUser"
+        android:layout_marginBottom="@dimen/user_setup_frag_login_button_margin_bottom"/>
+
+    <!-- CREATE NEW USER -->
+
+    <TextView
+        android:id="@+id/user_setup_register_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/user_setup_register_text"
+        android:textSize="@dimen/user_setup_frag_register_text_size"
+        android:textColor="#0e0e0e"
+        android:layout_marginBottom="@dimen/user_setup_frag_register_text_margin_bottom"/>
+
+    <EditText
+        android:id="@+id/user_setup_register_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/user_setup_register_hint"
+        android:textColor="#0e0e0e"
+        android:inputType="textPersonName"
+        android:textCursorDrawable="@null"
+        android:layout_marginBottom="@dimen/user_setup_frag_register_text_margin_bottom"/>
+
+    <Button
+        android:id="@+id/user_setup_register_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/user_setup_register_button"
+        android:textColor="#0e0e0e"
+        android:background="#a9b1ef"
+        android:onClick="registerNewUser"
+        android:layout_marginBottom="@dimen/user_setup_frag_register_button_margin_bottom"/>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/swap_difficulty_padding"
+    android:paddingRight="@dimen/swap_difficulty_padding" >
+
+    <TextView
+        android:id="@+id/swap_select_difficulty_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/swap_difficulty_title"
+        android:textColor="@color/generic_text_color"
+        android:textSize="@dimen/swap_difficulty_title_size"/>
+
+    <LinearLayout
+        android:id="@+id/swap_select_difficulty_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ws.isak.bridge.ui.SwapDifficultyView
+            android:id="@+id/select_swap_difficulty_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ws.isak.bridge.ui.SwapDifficultyView
+            android:id="@+id/select_swap_difficulty_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ws.isak.bridge.ui.SwapDifficultyView
+            android:id="@+id/select_swap_difficulty_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>

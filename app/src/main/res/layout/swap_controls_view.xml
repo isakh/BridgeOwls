@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ws.isak.bridge.ui.SwapControlsView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_red"> <!-- TODO remove/adjust border-->
+
+    <TableLayout
+        android:id="@+id/swap_audio_buttons_table"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:stretchColumns="*" />       <!-- FIXME android:layout_width="120dp to dimens along with marginTop" -->
+
+</ws.isak.bridge.ui.SwapControlsView>
