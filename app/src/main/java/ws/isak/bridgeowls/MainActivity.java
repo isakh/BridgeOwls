@@ -185,24 +185,29 @@ public class  MainActivity extends FragmentActivity {
         //create the local list to hold the cards in the matching deck
         Shared.matchCardDataList = new ArrayList<MatchCardData>();
         //iterate over the number of cards to put in the deck
-        for (int i = 1; i <= 10; i++) {                             //FIXME - make this constant into a variable
-            MatchCardData curCard = new MatchCardData();
-            curCard.setCardID(i);
-            curCard.setSpeciesName(curCard.getCardID());
-            //curCard.setPairedImageDiffer(false);
-            //curCard.setFirstImageUsed(false);
-            curCard.setImageURI0(URI_DRAWABLE + "blank_card");
-            curCard.setImageURI1(URI_DRAWABLE + String.format(Locale.ENGLISH, "match_bird_%d", i) + "_a");
-            curCard.setImageURI2(URI_DRAWABLE + String.format(Locale.ENGLISH, "match_bird_%d", i) + "_b");
-            curCard.setImageURI3(URI_DRAWABLE + String.format(Locale.ENGLISH, "match_spectro_%d", i));
-            curCard.setAudioURI(URI_AUDIO + String.format(Locale.ENGLISH, "match_audio_%d", i));
-            curCard.setSampleDuration(Audio.getAudioDuration(Shared.context.getResources().getIdentifier(curCard.getAudioURI().substring(URI_AUDIO.length()), "raw", Shared.context.getPackageName())));
-            //insert matchCardData object into local storage and if not already in database add it to the database
-            Shared.matchCardDataList.add(curCard);
-            Log.d (TAG, "method buildMatchCardDataList: added curCard: " + Shared.matchCardDataList);
-            if (!MatchCardDataORM.isMatchCardDataInDB(curCard)) {
-                Log.i (TAG, "method buildMatchCardDataList: card not previously in database: adding...");
-                MatchCardDataORM.insertMatchCardData(curCard);
+        for (int i = 1; i <= Shared.context.getResources().getInteger(R.integer.num_target_species); i++) {
+            for (int j = 1; j <= Shared.context.getResources().getInteger(R.integer.num_individual_types); j++) {
+                for (int k = 1; k <= Shared.context.getResources().getInteger(R.integer.num_utterance_types); k++) {
+                    MatchCardData curCard = new MatchCardData();
+                    curCard.setCardID(i*j*k);
+                    curCard.setSpeciesName(i);
+                    curCard.setIndividualType(j);
+                    curCard.setUtteranceType(k);
+
+                    curCard.setImageURI0(URI_DRAWABLE + "blank_card");
+                    curCard.setImageURI1(URI_DRAWABLE + String.format(Locale.ENGLISH, "match_bird_%d", i*j*k) + "_a");
+                    curCard.setImageURI2(URI_DRAWABLE + String.format(Locale.ENGLISH, "match_bird_%d", i*j*k) + "_b");
+                    curCard.setImageURI3(URI_DRAWABLE + String.format(Locale.ENGLISH, "match_spectro_%d", i*j*k));
+                    curCard.setAudioURI(URI_AUDIO + String.format(Locale.ENGLISH, "match_audio_%d", i*j*k));
+                    curCard.setSampleDuration(Audio.getAudioDuration(Shared.context.getResources().getIdentifier(curCard.getAudioURI().substring(URI_AUDIO.length()), "raw", Shared.context.getPackageName())));
+                    //insert matchCardData object into local storage and if not already in database add it to the database
+                    Shared.matchCardDataList.add(curCard);
+                    Log.d(TAG, "method buildMatchCardDataList: added curCard: " + Shared.matchCardDataList);
+                    if (!MatchCardDataORM.isMatchCardDataInDB(curCard)) {
+                        Log.i(TAG, "method buildMatchCardDataList: card not previously in database: adding...");
+                        MatchCardDataORM.insertMatchCardData(curCard);
+                    }
+                }
             }
         }
         Shared.debugStateOfMatchCardDataList("Class MainActivity: method buildMatchCardDataList");
