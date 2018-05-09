@@ -277,8 +277,27 @@
     -->
 
     <!-- =================================================================================== -->
-    <!-- Class: SpeciesList Colorado -->
+    <!-- Class: SpeciesList OWLS -->
     <!-- *************************** -->
-    <!-- TODO -->
+    <string name="species_owl_1">Barn Owl - Tyto alba</string>
+    <string name="species_owl_2">Little Owl - Athene noctua</string>
+    <string name="species_owl_3">Short-Eared Owl - Asio flammeus</string>
+    <string name="species_owl_4">Tawny Owl - Strix aluco</string>
+
+    <!-- =================================================================================== -->
+    <!-- Class: Utterance Types -->
+    <!-- *************************** -->
+    <string name="utterance_type_1">Song</string>
+    <string name="utterance_type_2">Call</string>
+    <string name="utterance_type_3">Flight Call</string>
+    <string name="utterance_type_4">Alarm Call</string>
+    <string name="utterance_type_5">Utterance 5</string>
+
+    <!-- =================================================================================== -->
+    <!-- Class: Individual Types -->
+    <!-- *************************** -->
+    <string name="individual_type_1">Adult Male</string>
+    <string name="individual_type_2">Adult Female</string>
+    <string name="individual_type_3">Juvenile</string>
 
 </resources>
