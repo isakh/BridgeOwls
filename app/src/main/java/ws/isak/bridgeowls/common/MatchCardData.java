@@ -17,6 +17,8 @@ public class MatchCardData
 
     private int cardID;                     //FIXME Private Key? Tile ID between 1 and the number of tiles objects in resources
     private String speciesName;             //this string stores the species name from R.strings.species_bird_% FIXME make dynamic?
+    private String individualType;          //this string stores the gender/age of the individual
+    private String utteranceType;           //this string stores utterance types from R.strings.utterance_type_%
 
     private boolean pairedImagesDiffer;     //boolean true if there is a second image in the pair
     private boolean firstImageUsed;         //switches to true when the object is accessed a second time
@@ -64,34 +66,16 @@ public class MatchCardData
             //Log.d (TAG, "method setSpeciesName: species: " + species);
             switch (id) {
                 case 1:
-                    speciesName = Shared.context.getResources().getString(R.string.species_bird_1);
+                    speciesName = Shared.context.getResources().getString(R.string.species_owl_1);
                     break;
                 case 2:
-                    speciesName = Shared.context.getResources().getString(R.string.species_bird_2);
+                    speciesName = Shared.context.getResources().getString(R.string.species_owl_2);
                     break;
                 case 3:
-                    speciesName = Shared.context.getResources().getString(R.string.species_bird_3);
+                    speciesName = Shared.context.getResources().getString(R.string.species_owl_3);
                     break;
                 case 4:
-                    speciesName = Shared.context.getResources().getString(R.string.species_bird_4);
-                    break;
-                case 5:
-                    speciesName = Shared.context.getResources().getString(R.string.species_bird_5);
-                    break;
-                case 6:
-                    speciesName = Shared.context.getResources().getString(R.string.species_bird_6);
-                    break;
-                case 7:
-                    speciesName = Shared.context.getResources().getString(R.string.species_bird_7);
-                    break;
-                case 8:
-                    speciesName = Shared.context.getResources().getString(R.string.species_bird_8);
-                    break;
-                case 9:
-                    speciesName = Shared.context.getResources().getString(R.string.species_bird_9);
-                    break;
-                case 10:
-                    speciesName = Shared.context.getResources().getString(R.string.species_bird_10);
+                    speciesName = Shared.context.getResources().getString(R.string.species_owl_4);
                     break;
             }
         }
@@ -109,6 +93,91 @@ public class MatchCardData
         try {
             //Log.d (TAG, "method getSpeciesName: return: species: " + speciesName);
             return speciesName;
+        }
+        catch (NullPointerException npe) {
+            npe.printStackTrace();
+            return null;
+        }
+    }
+
+    /*
+     * Methods to set/get the individual type (to be used in a toast when a pair matches)
+     */
+    public void setIndividualType (int id) {
+        try {
+            //Log.d (TAG, "method setIndividualType: individualType: " + individualType);
+            switch (id) {
+                case 1:
+                    individualType = Shared.context.getResources().getString(R.string.individual_type_1);
+                    break;
+                case 2:
+                    individualType = Shared.context.getResources().getString(R.string.individual_type_2);
+                    break;
+                case 3:
+                    individualType = Shared.context.getResources().getString(R.string.individual_type_3);
+                    break;
+            }
+        }
+        catch (IllegalArgumentException e) {
+            e.getStackTrace();
+        }
+    }
+
+    //FIXME Overloaded method call for retrieval from database
+    public void setIndividualType (String type) {
+        individualType = type;
+    }
+
+    public String getIndividualType () {
+        try {
+            //Log.d (TAG, "method getIndividualType: return: individual type: " + individualType);
+            return individualType;
+        }
+        catch (NullPointerException npe) {
+            npe.printStackTrace();
+            return null;
+        }
+    }
+
+
+    /*
+    * Methods to set/get the utteranceType (to be used in a toast when a pair matches)
+    */
+    public void setUtteranceType (int id) {
+        try {
+            //Log.d (TAG, "method setSpeciesName: species: " + species);
+            switch (id) {
+                case 1:
+                    utteranceType = Shared.context.getResources().getString(R.string.utterance_type_1);
+                    break;
+                case 2:
+                    utteranceType = Shared.context.getResources().getString(R.string.utterance_type_2);
+                    break;
+                case 3:
+                    utteranceType = Shared.context.getResources().getString(R.string.utterance_type_3);
+                    break;
+                case 4:
+                    utteranceType = Shared.context.getResources().getString(R.string.utterance_type_4);
+                    break;
+                case 5:
+                    utteranceType = Shared.context.getResources().getString(R.string.utterance_type_5);
+                    break;
+            }
+        }
+        catch (IllegalArgumentException e) {
+            e.getStackTrace();
+        }
+    }
+
+    //FIXME Overloaded method call for retrieval from database
+    public void setUtteranceType (String utterance) {
+        utteranceType = utterance;
+    }
+
+    public String getUtteranceType () {
+        try {
+            //Log.d (TAG, "method getUtteranceType: return: utteranceType: " + utteranceType);
+            return utteranceType;
         }
         catch (NullPointerException npe) {
             npe.printStackTrace();
