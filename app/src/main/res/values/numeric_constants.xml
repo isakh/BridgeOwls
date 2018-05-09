@@ -4,4 +4,9 @@
     <integer name="winning_three_star_percent_of_allotted_time">50</integer>
     <integer name="winning_two_star_percent_of_allotted_time">75</integer>
     <integer name="winning_one_star_percent_of_allotted_time">90</integer>
+
+    <!-- SETUP VARIABLES FOR CARD DECKS - Used in MainActivity -->
+    <integer name="num_target_species">4</integer>
+    <integer name="num_individual_types">3</integer>
+    <integer name="num_utterance_types">5</integer>
 </resources>
