@@ -31,6 +31,12 @@ public class MatchCardDataORM {
     private static final String COLUMN_SPECIES_NAME_TYPE = "STRING";
     private static final String COLUMN_SPECIES_NAME = "speciesName";
 
+    private static final String COLUMN_UTTERANCE_TYPE_TYPE = "STRING";
+    private static final String COLUMN_UTTERANCE_TYPE = "utteranceType";
+
+    private static final String COLUMN_INDIVIDUAL_TYPE_TYPE = "STRING";
+    private static final String COLUMN_INDIVIDUAL_TYPE = "individualType";
+
     //sqlite cannot deal with booleans, pairedImagesDiffer and firstImageUsed become INTEGERS
     //private static final String COLUMN_PAIRED_IMAGES_DIFFER_TYPE = "INTEGER";
     //private static final String COLUMN_PAIRED_IMAGES_DIFFER = "pairedImagesDiffer";
@@ -61,6 +67,8 @@ public class MatchCardDataORM {
             " (" +
             COLUMN_CARD_ID + " " + COLUMN_CARD_ID_TYPE + COMMA_SEP +
             COLUMN_SPECIES_NAME + " " + COLUMN_SPECIES_NAME_TYPE + COMMA_SEP +
+            COLUMN_INDIVIDUAL_TYPE + " " + COLUMN_INDIVIDUAL_TYPE_TYPE + COMMA_SEP +
+            COLUMN_UTTERANCE_TYPE + " " + COLUMN_UTTERANCE_TYPE_TYPE + COMMA_SEP +
             //COLUMN_PAIRED_IMAGES_DIFFER + " " + COLUMN_PAIRED_IMAGES_DIFFER_TYPE + COMMA_SEP +
             //COLUMN_FIRST_IMAGE_USED + " " + COLUMN_FIRST_IMAGE_USED_TYPE + COMMA_SEP +
             COLUMN_IMAGE_URI0 + " " + COLUMN_IMAGE_URI0_TYPE + COMMA_SEP +
@@ -170,6 +178,8 @@ public class MatchCardDataORM {
                     Log.d (TAG, "... PARSE: MatchCardData object to return:" +
                             " | cardID: " + matchCardDataAtCursor.getCardID() +
                             " | speciesName: " + matchCardDataAtCursor.getSpeciesName() +
+                            " | individualType: " + matchCardDataAtCursor.getIndividualType() +
+                            " | utteranceType: " + matchCardDataAtCursor.getUtteranceType() +
                             " | pairedImagesDiffer: " + matchCardDataAtCursor.getPairedImageDiffer() +
                             " | firstImageUsed: " + matchCardDataAtCursor.getFirstImageUsed() +
                             " | imageURI0: " + matchCardDataAtCursor.getImageURI0() +
@@ -226,6 +236,8 @@ public class MatchCardDataORM {
 
         values.put (COLUMN_CARD_ID, matchCardData.getCardID());
         values.put (COLUMN_SPECIES_NAME, matchCardData.getSpeciesName());
+        values.put (COLUMN_INDIVIDUAL_TYPE, matchCardData.getIndividualType());
+        values.put (COLUMN_UTTERANCE_TYPE, matchCardData.getUtteranceType());
 
         //if (!matchCardData.getPairedImageDiffer()) { values.put (COLUMN_PAIRED_IMAGES_DIFFER, 0);}       //TODO Check logic
         //else{ values.put (COLUMN_PAIRED_IMAGES_DIFFER, 1); }
@@ -249,6 +261,8 @@ public class MatchCardDataORM {
 
         cursorAtMatchCardData.setCardID (cursor.getInt(cursor.getColumnIndex(COLUMN_CARD_ID)));
         cursorAtMatchCardData.setSpeciesName(cursor.getString(cursor.getColumnIndex(COLUMN_SPECIES_NAME)));      //FIXME solve string approach to species loading - currently overloading constructor
+        cursorAtMatchCardData.setIndividualType(cursor.getString(cursor.getColumnIndex(COLUMN_INDIVIDUAL_TYPE)));
+        cursorAtMatchCardData.setUtteranceType(cursor.getString(cursor.getColumnIndex(COLUMN_UTTERANCE_TYPE)));
 
         /* REMOVE PAIRED IMAGES DIFFER AND COLUMN FIRST IMAGE USED
         if (cursor.getInt(cursor.getColumnIndex(COLUMN_PAIRED_IMAGES_DIFFER)) == 1) { cursorAtMatchCardData.setPairedImageDiffer(true); }
